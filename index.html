@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Meta data -->
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Encriptar palabras, Encriptador, Ocultar">
+    <meta name="author" content="Felix Kevin Acarapi Rivero">
+    <meta name="description" content="Codificador de mensajes seguro: Oculta tus mensajes confidenciales con nuestro encriptador. ¡Protege tu privacidad con una encriptación potente y segura!">
+    <meta name="languaje" content="es">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Css -->
+    <link rel="stylesheet" href="./src/css/style.css">
+    <!-- Title  -->
+    <title>Encriptador</title>
+</head>
+<body>
+    
+    <!-- Section HEADER -->
+    <header>
+        <div class="containerLogo">
+            <img src="./src/img/logo.svg" alt="logo" class="logo">
+        </div>
+    </header>
+
+    <!-- Section MAIN -->
+    <main>
+        <section class="textOrigin">
+            <div class="containerText">
+                <textarea class="inputText" placeholder="Ingresar texto aquí"></textarea>
+            </div>
+            <div class="containerAlert">
+                <img src="./src/img/alert.svg" alt="alert" class="alertSymbol">
+                <p class="alert">Solo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="containerInput">
+                <input type="button" value="Encriptar" class="btn-encrypt">
+                <input type="button" value="Desencriptar" class="btn-decrypt">
+            </div>
+        </section>
+        <section class="resultEncryptor">
+            <div class="containerEncrypt">
+                <div class="containerEmpty">
+                    <img src="./src/img/doll.svg" alt="doll" class="doll">
+                    <h3 class="emptyMessage"> Ningún mensaje fue <span>encontrado</span> </h3> 
+                    <p class="emptyParagraph"> Ingresar el texto que deseas encriptar o <span>desencriptar</span> </p>
+                </div>
+                <div class="resultContainer">
+                    <p class="textResult"></p>
+                </div>
+                <div class="containerButton">
+                    <input type="button" value="Copiar" class="btn-copy">
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- JavaScript -->
+    <script src="./src/js/app.js"></script>
+</body>
+</html>

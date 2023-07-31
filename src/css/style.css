@@ -1,0 +1,250 @@
+/* Master reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+body {
+    background-color: #f4f4fc;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+/* Section HEADER */
+
+header {
+    width: 100%;
+}
+
+.containerLogo {
+    padding: 1em 0;
+}
+
+/* Section MAIN */
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+@media screen and (min-width:1200px) {
+    main {
+        width: 90%;
+        height: 89vh;
+        margin: 0 auto;
+        flex-direction: row;
+    }
+}
+
+/*  */
+
+.containerText, .containerAlert, .containerInput, .containerEmpty, .containerButton, .resultContainer, .containerEncrypt {
+    width: 90%;
+    margin: 0 auto;
+}
+
+@media screen and (min-width:992px) {
+    .containerText, .containerAlert, .containerInput, .containerEmpty, .containerButton, .resultContainer, .containerEncrypt {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .containerText, .containerAlert, .containerInput, .containerEmpty, .containerButton, .resultContainer, .containerEncrypt {
+        width: 90%;
+    }
+}
+
+/* Section textOrigin */
+
+.containerText {
+    height: 14rem;
+}
+
+.containerText textarea {
+    background-color: #f4f4fc;
+    outline: none;
+    border: none;
+    font-size: 32px;
+    color: #0A3871;
+}
+
+.containerText textarea::placeholder {
+    color: #0A3871;
+    font-size: 32px;
+}
+
+.containerText .inputText {
+    width: 100%;
+    height: 100%;
+}
+
+/* Content Alert */
+
+.containerAlert {
+    display: flex;
+    margin-top: 2em;
+}
+
+.alert {
+    margin-left: 10px;
+}
+
+/* containerInput encrypt - decrypt */
+
+.containerInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150px;
+    margin-top: 2em;
+}
+
+.containerInput input {
+    border-radius: 32px;
+    height: 3.5em;
+    cursor: pointer;
+}
+
+.containerInput input:nth-child(1) {
+    background-color: #0A3871;
+    color:#FFFFFF;
+}
+
+.containerInput input:nth-child(2), .btn-copy {
+    border: 1px solid #0A3871;
+    background-color: #f4f4fc;
+    color: #0A3871;
+}
+
+/* Content button encrypt - decrypt */
+
+@media screen and (min-width:768px) {
+    .containerInput {
+        flex-direction: row;
+        height: auto;
+    }
+    .containerInput input {
+        width: 332px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .containerText {
+        height: 35rem;
+    }
+}
+
+
+/* Section RESULT ENCRYPTOR */
+
+.resultEncryptor {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.containerEmpty .emptyMessage, .emptyMessage > span {
+    font-size: 1.5rem;
+}
+
+.resultEncryptor .containerEncrypt {
+    background-color: #FFFFFF;
+    border-radius: 32px;
+    padding: 1em;
+    min-height: 215px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    justify-content: stretch;
+}
+
+.containerEncrypt .containerEmpty {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.containerEncrypt .containerEmpty .doll {
+    width: 250px;
+}
+
+.containerEncrypt .containerEmpty h3, p {
+    text-align: center;
+}
+
+.resultContainer .textResult {
+    color: #495057;
+    font-size: 32px;
+}
+
+/* I flatten the old values ​​so that I occupy the full width of the parent tag */
+.containerEncrypt .containerButton {
+    width: 100%;
+    margin: 0;
+    align-self: flex-end;
+}
+
+.containerEncrypt .containerButton input {
+    height: 3.5em;
+    width: 100%;
+    border-radius: 32px;
+    margin-top: 1em;
+    cursor: pointer;
+}
+
+@media screen and (min-width:992px) {
+    .containerEncrypt .containerButton {
+        display: flex;
+        justify-content: center;
+    }
+
+    .containerEncrypt .containerButton input {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .resultEncryptor {
+        margin-top: 0;
+        display: block;
+    }
+
+    .resultEncryptor .containerEncrypt {
+        height: 45em;
+        display: grid;
+    }
+
+    .containerEncrypt .containerEmpty {
+        align-self: end;
+    }
+
+    .containerEncrypt .containerButton {
+        align-self: end;
+    }
+}
+
+/* I hide the doll image when the screen width is less than 1200px */
+@media screen and (max-width:1200px) {
+    .containerEmpty img {
+        display: none;
+    } 
+}
+
+@media screen and (min-width:1200px) {
+    .resultEncryptor {
+        width: 400px;
+    }
+}
+
+
+/* class that is created in javascript and added to pContainer */
+#hide {
+    display: none;
+}
+
